@@ -18,18 +18,18 @@
     
             
        <input type="button" style="width:250px; height:25px" value="Ingresar Requerimiento" onclick = "location='ingresarrequerimiento.jsp'"/>
-            
-        <div class="spacer"></div>
        
+        <div class="spacer"></div>
+        <br>
    
        <input type="button" style="width:250px; height:25px" value="Consultar Requerimientos" onclick = "location='consultarrequerimientos.jsp'"/>
             
         <div class="spacer"></div>
-            
+                  <br>
        <input type="button" style="width:250px; height:25px" value="Cerrar Requerimiento" onclick = "location='cerrarrequerimientos.jsp'"/>
             
         <div class="spacer"></div>
-
+      <br>
     </form>
     </body>
 </html>

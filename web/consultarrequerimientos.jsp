@@ -12,7 +12,7 @@
         <title>JSP Page</title>
     </head>
     <body>
-       <h1>Consultar Requerimientos</h1>
+    <center><h1>Consultar Requerimientos</h1>
         <table> 
         <tr>
         <td>Gerencia:</td>
@@ -26,7 +26,8 @@
         <td>Asignar A:</td>
         <td><select name="requerimientos"><option value="asignar">SELECCIONAR</option>
         <td><input type="submit" style="width:150px; height:20px" value="buscar"></td>
-       </table><br><br><br><br><br><br><br><br><br><br><br>
+        </table><br><br><br><br><br><br><br><br><br><br><br>
    <input type="button" style="width:250px; height:25px" value="Volver al Menu" onclick = "location='menuprincipal.jsp'"/>
+    </center>
     </body>
 </html>

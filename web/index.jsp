@@ -4,6 +4,11 @@
     Author     : ignacio
 --%>
 
+<%@page import="java.sql.SQLException"%>
+<%@page import="java.sql.ResultSet"%>
+<%@page import="java.sql.Statement"%>
+<%@page import="java.sql.DriverManager"%>
+<%@page import="java.sql.Connection"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -13,28 +18,32 @@
     </head>
     <body>
          
-    <h1>Autentificacion</h1>
-        <form action="menuprincipal.jsp" method="post">
+   <center> <h1>Autentificacion</h1>
+    <form action="servlet" method="post">
         <tr>             
         <table>
             <tr>
             <td>Usuario:</td>
-            <td><input type="text" name="user"></td>
+            <td><input type="text" name="username"></td>
             </tr>
             <tr>
             <td>Password:</td>
-            <td><input type="password" name="pass"></td>                     
+            <td><input type="password" name="password"></td>                     
             </tr>
             <tr>
             <td colspan="2">
-            <input type="submit" style="width:100px; height:25px" value="Ingresar">
             </td>
             </tr>
             </td>
             </tr>
             </table> 
-            </form>    
-            
-  
-    </body>
+        <p><input type="checkbox" name="remember">Recordar</p> 
+        <input type="submit" value="ingresar">
+    </form>
+      </center>
+    
+</body>
+    
+    
+     
 </html>

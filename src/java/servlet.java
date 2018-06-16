@@ -38,14 +38,14 @@ public class servlet extends HttpServlet {
         try (PrintWriter out = response.getWriter()) {
             
        
-            String usuario = request.getParameter("user");
-            String password = request.getParameter("pass");
+            String usuario = request.getParameter("username");
+            String password = request.getParameter("password");
             String usernamesql="";
             String passwordsql="";
             
             try{
                 Class.forName("com.mysql.jdbc.Driver");
-                Connection conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/ena2","root","");
+                Connection conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/Requerimientos","root","");
                 String query="select * from user where user.username='"+usuario+"' and user.password='"+password+"'";
                 Statement st=conn.createStatement();
                 ResultSet rs = st.executeQuery(query);
