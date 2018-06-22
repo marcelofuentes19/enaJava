@@ -31,6 +31,8 @@ public class servlet extends HttpServlet {
      * @param response servlet response
      * @throws ServletException if a servlet-specific error occurs
      * @throws IOException if an I/O error occurs
+     * @throws java.lang.ClassNotFoundException
+     * @throws java.sql.SQLException
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException, ClassNotFoundException, SQLException {
@@ -45,7 +47,7 @@ public class servlet extends HttpServlet {
             
             try{
                 Class.forName("com.mysql.jdbc.Driver");
-                Connection conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/Requerimientos","root","");
+                Connection conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/requerimiento","root","");
                 String query="select * from user where user.username='"+usuario+"' and user.password='"+password+"'";
                 Statement st=conn.createStatement();
                 ResultSet rs = st.executeQuery(query);
@@ -86,8 +88,8 @@ public class servlet extends HttpServlet {
             
              if(usuario.equals(usernamesql)||password.equals(passwordsql)){
                  HttpSession User = (HttpSession)request.getSession();            
-            User.setAttribute("usuario",usuario);
-            response.sendRedirect("menuprincipal.jsp");             
+            User.setAttribute("invocador",usuario);
+            response.sendRedirect("ingresarrequerimiento.jsp");             
             }
          
             

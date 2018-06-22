@@ -41,7 +41,11 @@
         <input type="submit" value="ingresar">
     </form>
       </center>
-    
+      <%
+            if(request.getAttribute("msg")!=null){
+            out.print(request.getAttribute("msg"));
+            }
+            %>
 </body>
     
     
